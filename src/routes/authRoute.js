@@ -9,6 +9,7 @@ import {
   signOut,
   signOutAdmin,
   signUp,
+  signUpAdmin,
 } from '../controllers/authController.js';
 import {
   withAuth,
@@ -48,6 +49,14 @@ router.post(
     check('password', 'Password field is required').isLength({ min: 8 }),
   ],
   signInAdmin
+);
+router.post(
+  '/signup/admin',
+  [
+    check('email', 'Email is required').isEmail(),
+    check('password', 'Password field is required').isLength({ min: 8 }),
+  ],
+  signUpAdmin
 );
 
 router.post(

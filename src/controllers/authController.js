@@ -104,6 +104,7 @@ export const signUp = async (req, res) => {
     });
   }
 };
+
 export const signIn = async (req, res) => {
   const user = await User.findOne({
     where: {
@@ -163,6 +164,7 @@ export const signIn = async (req, res) => {
     // },
   });
 };
+
 export const activateAccount = async (req, res) => {
   if (!req.body.code) {
     return res.status(400).json({
