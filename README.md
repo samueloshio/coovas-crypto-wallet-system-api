@@ -117,8 +117,21 @@ cryptocurrency-wallet-api/
 │ │ └── withdrawRoute.js
 │ │
 │ ├── utils/ # Utility functions
-│ │ ├── validation.js
-│ │ └── logger.js
+│ │ ├── payments/
+│ │ |   ├── coinbase.js
+│ │ |   ├── coingate.js
+│ │ |   ├── coinpayments.js
+│ │ |   ├── mollie.js
+│ │ |   ├── paypal.js
+│ │ |   ├── paystack.js
+│ │ |   ├── stripe.js
+│ │ |   └── voguepay.js
+│ │ |
+│ │ ├── dates.js
+│ │ ├── firstDeposit.js
+│ │ ├── generateCode.js
+│ │ ├── mailer.js
+│ │ └── wallet.js
 │ │
 │ └── app.js # Express application setup
 │
